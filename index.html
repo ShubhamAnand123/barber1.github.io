@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARBER SHOP</title>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500&family=Balsamiq+Sans&family=Kaushan+Script&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <style>
+        *{
+    margin:0;
+    padding: 0;
+}
+
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Kaushan Script', cursive;
+}
+#banner{
+    background: linear-gradient(rgba(0,0,0,0.5),#009688),url(Barber_Shop_img/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.logo{
+    width: 140px;
+    position: absolute;
+    top:4%;
+    left:10%;
+}
+.banner-text{
+    text-align: center;
+    color: #fff;
+    padding-top:180px;
+
+}
+.banner-text h1{
+    font-size: 130px;
+    font-family: 'Kaushan Script', cursive;
+}
+.banner-text p{
+    font-size: 20px;
+    font-style: italic;
+
+}
+.banner-btn
+{    text-align: center;
+    margin:70px auto 0;
+    }
+.banner-btn a{
+    
+    width:150px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 100;
+    font-family: 'Courier New', Courier, monospace;
+    display: inline-block;
+    margin: 0 10px;
+    padding:12px 0;
+    color:#fff;
+    border:0.5px solid #fff;
+    position:relative;
+    z-index: 1;
+    transition: 0.5s;
+
+}
+.banner-btn a:hover span{
+    width:100%;
+
+}
+.banner-btn a:hover{
+    color:black;
+}
+
+.banner-btn a span{
+    width:0;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    background:#fff;
+    z-index: -1;
+    transition:0.5s;
+}
+#navside{
+    width:250px;
+    right:-250px;
+    height:100vh;
+    position: fixed;
+    right:0;
+    top:0;
+    background:#009688;
+    z-index: 2;
+    transition: color 0.5s;
+}
+
+nav ul li {
+    list-style: none;
+    
+
+    margin:50px 20px;
+
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    color:#fff;
+}
+#menur
+{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    position: fixed;
+    background: #009688;
+    right: 30px;
+    top:20px;
+    border-radius: 3px;
+    z-index: 3;
+    cursor: pointer;
+}
+#menur img
+{
+    width:20px;
+    margin-top: 15px;
+    
+
+}
+@media screen and (max-width:770px){
+    .banner-text h1{
+        font-size: 44px;
+        }
+        .banner-btn a{
+            display:block;
+            margin:20px auto;
+        }
+        .navside{
+            width:20px;
+
+        }
+}
+
+
+
+
+
+#services{
+    width:100%;
+    padding:7px;
+background: #efefef;
+}
+.service-box{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin:auto;
+}
+.service-dec{
+    width:80%;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    opacity:0;
+    transform: translateX(-50%);
+    transition: 1s;
+}
+.service-dec h3{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 30px;
+    
+}
+.service-dec p{
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 19px;
+}
+.single-service:hover .service-dec{
+    bottom:40%;
+    opacity:1;
+
+}
+
+
+    .single-service{
+        flex-basis: auto;
+        text-align: center;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        color:#fff ;
+        position: relative;
+    }
+    .single-service img{
+        border-radius: 7px;
+        width:100%;
+
+    }
+    .overlay{
+        width:100%;
+        height:100%;
+        position:absolute;
+        top:0;
+        border-radius: 7px;
+        cursor:pointer;
+        background: linear-gradient(rgba(0,0,0,0.5),#009688);
+        opacity:0;
+        transition:1s;
+    }
+    .single-service :hover.overlay{
+        opacity:0.8;
+    }
+    hr{
+        background: #fff;
+        height: 2px;
+        border:0;
+        margin:15px auto;
+        width: 60%;
+
+
+    }
+   
+    
+
+#feature{
+    width:100%;
+    padding:70px 0;
+}
+.tittle-text{
+    align-items: center ;
+    text-align: center;
+    padding-bottom: 70px;
+}
+.tittle-text p{
+    text-align: center;
+     font-weight: bold;
+     font-size: 20px;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    color:#009688;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+
+    
+}
+.tittle-text p::after{
+    content: '';
+    width:50px;
+    height:35px;
+    background :linear-gradient(#019857,#fff);
+    position:absolute;
+    left:0;
+    top:-20px;
+    z-index: -1;
+    transform: rotate(10deg);
+    border-top-left-radius: 35px;
+    border-bottom-right-radius:35px;
+
+
+
+}
+.tittle-text h1{
+    font-size: 50px;
+}
+.feature-box{
+    width:80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+.features
+{
+    flex-basis:50%;;
+}
+.features h1{
+    font-size: 45px;
+    text-align: left;
+    margin:bottom;
+    font-weight: 100;
+    color:#009688;
+    text-shadow: #019857;
+}
+
+.features-img{
+    flex-basis: 50%;
+    margin:auto;
+}
+.features-img img{
+    width:70%;
+    border-radius: 15px;
+   
+}
+.features-desc {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    font-size: 28px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+
+.feature-text p{
+    padding: 0 20px;
+    text-align: initial;
+}
+@media screen and (max-width:770px)
+ { .tittle-text h1{
+     font-size: 35px;
+      }
+      .feature{ 
+          flex-basis: 50%;
+      }   
+      .feature-img img{
+          width:100%;
+      }
+ }
+ 
+    
+
+ #t{
+    color:#009688;
+   width: 60px;
+   height: 50px;
+   border-radius: 05px;
+   font-size: 40px;
+   line-height: 45px;
+   border: 3px solid #009688;
+     }
+     @media screen and (max-width:770px) {
+        .single-service{
+            flex-basis: 100%;
+            margin-bottom: 30px;
+        }
+        .service-dec{
+            font-size: 12px;
+        }
+        hr{
+            margin:5px auto;
+        }
+        single-service:hover .service-dec{
+    bottom:25% !important;
+        
+    }
+}
+
+
+
+
+
+#testimonial{
+    width:96%;
+    padding:70px 0;
+}
+.testimonial-row{
+    width: 80%;
+    padding-right: 4px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-radius: 20px;
+
+    flex-wrap: wrap;
+}
+.testimonial-column{
+    flex-basis: 28%;
+    height:280px;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px 3px #009688;
+    cursor: pointer;
+    transition: transform(0.5s);
+}
+.testimonial-column p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+.user h4{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+.user small{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+.user img{
+    width:80px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+.user-info.fa{
+    margin-left:10px;
+    color: #27c0ff;
+    font-size: 20px;
+}
+.user-info.small{
+    color: #009688;
+}
+.user{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+  
+.testimonial-column:hover{
+    transform: translateY(7px);
+}
+@media screen and (max-width:770px) 
+{
+    .testimonial-column{
+        flex-basis: 100%;
+    }
+}    
+#footer{
+    padding: 100px 0 20px;
+position: relative;
+    background: #efefef;
+}
+.footer-row{
+    width:80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+}
+.footer-right{
+    flex-basis: 27%;
+    padding: 10px;
+    margin-bottom:20px;
+    }
+.footer-left{
+    flex-basis: 45%;
+    padding: 10px;
+    margin-bottom:20px;
+}
+
+
+.footer-right p{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.footer-left p{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.footer-right h1{
+font-size: 25px;
+}
+.footer-row h1{
+    margin:15px 0;
+}
+.footer-row p{
+    margin:10px;
+}
+.footer-left p .fa,.footer-right p .fa{
+    font-size: 30px;
+    color: #009688;
+    margin:10px;
+}
+.footer-img{
+    max-width: 370px;
+    opacity: 0.1;
+    position: absolute;
+    left:50%;
+    top:40%;
+    transform: translate(-50%,-50%);
+
+}
+.social{
+    text-align: center;
+    font-size: 40px;
+       
+}
+#rd{
+    height: 40px;
+   line-height: 40px;
+    width:45px;
+    font-size: 30px;
+    border: 1px solid #009688;
+    margin:40px 5px 0;
+    color: #009688;
+    cursor: pointer;
+    transition:0.5s;
+
+
+}
+#rd:hover{
+    background: #009688;
+    color: #fff;
+    transform: translateY(-7px);
+}
+@media screen and (max-width:770px) {
+    .footer-left,.footer-right{
+        flex-basis: 100%;
+        font-size: 14px;
+    }
+    .footer-img{
+        top:25%;
+    }
+    
+}
+
+
+
+    </style>
+    
+</head>
+<body>
+    <section id="banner">
+        <img src="Barber_Shop_img/logo.png" class="logo">
+        <div class = "banner-text">
+            <h1>Hair Studio</h1>
+            <p>STYLE YOUR HAIR IS STYLE YOUR LIFE</p>
+
+        
+        <div class="banner-btn">
+            <a href="#"><span></span>Find out</a>
+            <a href="#"><span></span>Read More</a>
+
+        </div>
+    </div>
+    </section>
+    <section id="feature">
+        <div class="tittle-text">
+            <p> FEATURES</p>
+            <h1>WHY CHOOSE US?</h1>
+            
+        </div>
+        <div class ="feature-box">
+            <div class="features">
+                <h1>Experience </h1>
+                <div class="features-desc">
+                    <div class="feature-icon">
+                        <i class="fa fa-shield" id="t"></i>
+                    </div>
+                    <div class="features-text"></div>
+                    <p> turning no-shows into g contact patrons with revised arrival times. </p>
+
+                </div>
+               
+                <h1>Book Online</h1>
+                <div class="features-desc">
+                    <div class="feature-icon">
+                        <i class="fa fa-check-square-o" id="t"></i>
+                    </div>
+                    <div class="features-text"></div>
+                    <p> turning no-shows into g contact patrons with revised arrival times. </p>
+
+                </div>
+                <h1>Affordable</h1>
+                <div class="features-desc">
+                    <div class="feature-icon">
+                      <i class="fa fa-inr" id="t"></i>
+                    </div>
+                    <div class="features-text"> 
+                    <p>turning no-shows into g contact patrons with revised arrival times. </p>
+                    <p>XYZ Banglore colony<i class="fa fa-map-marker"></i></p>
+                </div>
+
+                
+           
+                </div>           
+                </div>
+                
+
+            
+                    
+                    
+            <div class="features-img">
+                <img src="Barber_Shop_img/barber-man.jpg">
+
+            </div>
+        </div>
+            </section>
+            
+            
+            <section id="services">           
+                <div class="tittle-text">
+                    <br>
+                    <p> SERVICES</p>
+                    <h1>We Provide Better....</h1>
+                </div>
+                <div class="service-box">
+                <div class="single-service">
+                    <img src="Barber_Shop_img/pic-1.jpg">
+                    <div class="overlay"> </div>
+                    <div class="service-dec">
+                        <h3>Hair Styling</h3>
+                        <hr>
+                        <p>turning no-shows into g contact patrons with revised arrival times</p>
+                    </div>
+                </div>
+                <div class="single-service">
+                    <img src="Barber_Shop_img/pic-2.jpg">
+                    <div class="overlay"></div>
+                    <div class="service-dec">
+                        <h3>Hair Color</h3>
+                        <hr>
+                        <p>turning no-shows into g contact patrons with revised arrival times</p>
+                    </div>
+
+
+                </div>
+                <div class="single-service">
+                    <img src="Barber_Shop_img/pic-3.jpg">
+                    <div class="overlay"> </div>
+                    <div class="service-dec">
+                        <h3>Hair Cut</h3>
+                        <hr>
+                        <p>turning no-shows into g contact patrons with revised arrival times</p>
+                    </div>
+
+
+                </div>
+                <div class="single-service">
+                    <img src="Barber_Shop_img/pic-4.jpg">
+                    <div class="overlay"> </div>
+                    <div class="service-dec">
+                        <h3>Hair Growth</h3>
+                        <hr>
+                        <p>turning no-shows into g contact patrons with revised arrival times</p>
+                    </div>
+
+
+                </div>
+            </div>
+             </section>
+
+
+
+
+             <section id="testimonial">
+                <div class="tittle-text">
+                    <br>
+                    <p> TESTIMONIAL</p>
+                    <h1>What Client Says....</h1>
+                </div>
+                <div class="testimonial-row">
+                <div class="testimonial-column">
+                    <div class="user">
+                        <img src="Barber_Shop_img/img-1.jpg">
+                        <div class="userid">
+                            <h4>HAMJA<i class="fa fa-twitter"></i></h4>
+                            <small>@hamjasds</small>
+                        </div>
+                    </div>
+                    <p>Reviews on peer-to-peer sites can happen organically, often removing the company from the review process entirely. (This can be a nightmare if you’re managing a small business, since one bad review can have a huge impact,
+                         but this also makes the reviews seem more authentic.)</p>
+                </div>
+                <div class="testimonial-column">
+                    <div class="user">
+                        <img src="Barber_Shop_img/img-2.jpg">
+                        <h4>CHERRY<i class="fa fa-twitter"></i></h4>
+                            <small>@cherri</small>
+                    </div>
+                    <p>Reviews on peer-to-peer sites can happen organically, often removing the company from the review process entirely. (This can be a nightmare if you’re managing a small business, since one bad review can have a huge impact,
+                        but this also makes the reviews seem more authentic.)</p>
+                    </div>
+                <div class="testimonial-column">
+                    <div class="user">
+                        <img src="Barber_Shop_img/img-3.jpg">
+                        <h4>ABHA<i class="fa fa-twitter"></i></h4>
+                        <br>
+                            <small>@bhads</small>
+                       
+                        
+                        
+                    </div>
+                    <p>Reviews on peer-to-peer sites can happen organically, often removing the company from the review process entirely. (This can be a nightmare if you’re managing a small business, since one bad review can have a huge impact,
+                        but this also makes the reviews seem more authentic.)</p>
+                </div>
+                
+            </div>
+
+
+
+             </section>
+             <section id="footer">
+                 <img src="Barber_Shop_img/footer-img.png" class="footer-img">
+                <div class="tittle-text">
+                    <br>
+                    <p> CONTACT</p>
+                    <h1>Visit Shop Today....</h1>
+                </div>
+                <div class = "footer-row">
+                <div class = "footer-left">
+                    <h1>OPENING HOURS</h1>
+                    <p><i class="fa fa-clock-o"></i>Monday-Friday-9am to 9pm</p>
+                    <p><i class="fa fa-clock-o"></i>Saturday-Sunday-10am to 11pm</p>
+                    <p>CLOSED ON HOLIDAYS!!</p>
+
+                </div>
+                <div class = "footer-right">
+                    <h1>GET IN TOUCH</h1>
+                        <p>XYZ Banglore colony<i class="fa fa-map-marker"></i></p>
+                        <p>+913434344<i class="fa fa-phone"></i></p>
+                        <p>@dsdfdlfmdlfml<i class="fa fa-paper-plane"></i></p>
+                </div>
+            </div>
+            <div class="social">
+                <i class="fa fa-facebook" id="rd"></i>
+                <i class="fa fa-whatsapp"id="rd"></i>
+                <i class="fa fa-instagram"id="rd"></i>
+                <i class="fa fa-twitter"id="rd"></i>
+           </div>
+
+
+
+             </section>
+
+
+    
+    <div id="navside">
+        <nav>
+        <ul>
+            <li><a href="#banner">HOME</a></li>
+            <li><a href="#feature">FEATURES</a></li>
+            <li><a href="#testimonial">TESTIMONIAL</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#footer">MEET US</a></li>
+
+        </ul>
+    </nav>
+
+    </div>
+    <div id="menur">
+        <img src="Barber_Shop_img/menu.png" id ="menu">
+    </div>
+
+    <script>
+        var menur = document.getElementById("menur");
+        var navside = document.getElementById("navside");
+        var menu = document.getElementById("menu");
+        menu.onclick = function()
+        {
+            if(navside.style.right == "-250px")
+            {
+                navside.style.right="0";
+                menur.src="Barber_Shop_img/close.png"
+            }
+            else{
+            navside.style.right == "-250px";
+            menur.src="Barber_Shop_img/close.png"
+    
+            }
+        }
+        var scroll = new SmoothScroll('a[href*="#"]', {
+	speed: 500,
+	speedAsDuration: true
+});
+    </script>
+
+    
+</body>
+
+</html>
